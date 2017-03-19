@@ -1,0 +1,456 @@
+out:  style.css, sourcemap: true, compress: true
+
+@black: #000000;
+@darkBlue: #0f0f18;
+@lightBlue: #14b4ff;
+@veryLightBlue: #e0f1f8;
+@selectedText: #14b4ff;
+@menuBorderColor: #333333;
+@textBaseColor: #ffffff;
+@secondTextColor: #777777;
+@percentageRed: #fb2549;
+@percentageOrange: #ff702a;
+@percentageYellow: #ffbb17;
+
+body{
+  margin: 0px;
+}
+
+*:not(input){
+  cursor: default;
+}
+
+input, button, submit { border:none; }
+
+.menu{
+  @menuHeight: 60px;
+
+  background-color: @black;
+  height: @menuHeight;
+  text-align: center;
+  border-bottom: 1px solid @menuBorderColor;
+
+  .item{
+    display: inline-block;
+    padding: 0px 25px;
+    border-right: 1px solid @menuBorderColor;
+    height: 100%;
+    line-height: @menuHeight;
+    color: @textBaseColor;
+    font-size: 13px;
+    text-transform: uppercase;
+    cursor: default;
+  }
+
+  .item:first-child{
+    border-left: 1px solid @menuBorderColor;
+  }
+
+  .item.active{
+    color: @selectedText;
+  }
+}
+
+.mobileMenu{
+  display: inline-block;
+}
+
+.mobileMenuButton{
+  display: none;
+}
+
+.menuButton{
+  display: none;
+}
+
+.search{
+    display: inline-block;
+    margin-left: 10%;
+    line-height: 60px;
+    color: @textBaseColor;
+
+    .icon{
+      margin-left: -26px;
+      font-size: 18px;
+      color: @textBaseColor;
+    }
+
+    .button{
+        margin-left: 20px;
+    }
+}
+
+.searchPopup{
+  position: absolute;
+  top: 61px;
+  z-index: 2;
+  width: 100%;
+  height: 137px;
+  background-color: @black;
+
+  .searchBox{
+    margin-left: 30%;
+    margin-top: 48px;
+    padding: 7px;
+    border-color: transparent;
+    border-radius: 10px;
+    height: 27px;
+    background-color: @black;
+    font-size: 36px;
+    color: @textBaseColor;
+  }
+}
+
+.slider{
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  max-width: 100%;
+  width: 100vw;
+  height: 65vh;
+
+    .logoImage{
+      margin-bottom: 10px;
+    }
+
+    ul {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li{
+      position: relative;
+      display: block;
+      float: left;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100%;
+    }
+
+    .sliderImage{
+      width: 100%;
+      height: 100%;
+    }
+
+    .sliderImage-mobile{
+      display: none;
+    }
+
+    .productDetails{
+      position: absolute;
+      top: 10%;
+      left: 15%;
+      max-width: 27%;
+      color: white;
+    }
+
+    .category{
+      font-size: 13px;
+      text-transform: uppercase;
+      color: @secondTextColor;
+    }
+
+    .productName{
+      display: inline-block;
+      margin: 15px 0px 20px 0px;
+      font-size: 36px;
+      text-transform: uppercase;
+    }
+
+    .details{
+      margin-bottom: 35px;
+      font-size: 16px;
+    }
+
+    .price{
+      font-size: 36px;
+      color: @lightBlue;
+    }
+
+    .currency{
+      font-size: 25px;
+      color: @lightBlue;
+    }
+
+    .bestPrice{
+      font-size: 14px;
+      color: @secondTextColor;
+    }
+
+    .priceContainer{
+      display: inline-block;
+    }
+
+    .detailsButton{
+      margin-top: 25px;
+      width: 100%;
+    }
+
+    .size{
+      position: absolute;
+      bottom: 7%;
+      left: 15%;
+      color: @textBaseColor;
+    }
+
+    .sizeText{
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .percentage{
+      float: right;
+      background-color: @percentageRed;
+    }
+
+    .bicycle{
+      float: left;
+      margin-right: 5px;
+      width: 35px;
+      height: 35px;
+    }
+
+    .bicycleText{
+      margin-top: -2px;
+    }
+
+    .moreDetails{
+      margin-left: 20px;
+      font-size: 14px;
+    }
+}
+
+.articles{
+  margin-top: 30px;
+  margin-bottom: 100px;
+  padding: 0% 15%;
+
+  .item{
+    position: relative;
+    display: inline-block;
+    padding-top: 30px;
+    width: 24%;
+  }
+
+  .item:hover{
+    -moz-box-shadow: 0 0 32px rgba(149, 149, 149, 0.3);
+    -webkit-box-shadow: 0 0 32px rgba(149, 149, 149, 0.3);
+    box-shadow: 0 0 32px rgba(149, 149, 149, 0.3);
+  }
+
+  .itemImage{
+    display: block;
+    margin:  0 auto;
+  }
+
+  .itemText{
+    margin-left: 10%;
+    width: 80%;
+    font-size: 14px;
+    color: #727272;
+  }
+
+  .price{
+    margin-top: 10px;
+    margin-left: 10%;
+  }
+
+  .itemPrice{
+    font-size: 20px;
+    font-weight: bold;
+    color: @black;
+  }
+
+  .itemCurrency{
+    font-weight: bold;
+  }
+
+  .percentage{
+    display: inline-block;
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 10%;
+  }
+
+  .detailsButton{
+    display: none;
+  }
+}
+
+.item:hover .detailsButton{
+  float: right;
+  display: block;
+}
+
+.paginationBullets{
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+  display: inline-block;
+  height: 11px;
+
+    .bullet{
+      float: left;
+      display: inline-block;
+      margin-left: -1px;
+      border: 3px solid @veryLightBlue;
+      border-radius: 10px;
+      height: 5px;
+      width: 5px;
+
+    }
+
+    .bullet.active{
+      position: relative;
+      z-index: 1;
+      border: 3px solid @lightBlue;
+    }
+
+    .bridgeBetweenBullets{
+      float: left;
+      display: inline-block;
+      margin-top: 2px;
+      margin-left: -1px;
+      height: 7px;
+      width: 6px;
+      background-color: @veryLightBlue;
+    }
+}
+
+.button{
+  padding: 0px 12px;
+  height: 32px;
+  background-color: @lightBlue;
+  color: @textBaseColor;
+  text-transform: uppercase;
+}
+
+.percentage{
+  border-radius: 120px;
+  padding: 5px 16px;
+  line-height: 50px;
+  font-size: 14px;
+}
+
+.percentageRed{
+  background-color: @percentageRed;
+}
+
+.percentageOrange{
+  background-color: @percentageOrange;
+}
+
+.percentageYellow{
+  background-color: @percentageYellow;
+}
+
+@media (max-width:850px){
+  // menu
+  .mobileMenu{
+    position: absolute;
+    top: 61px;
+    left: 0;
+    z-index: 2;
+    display: inline-block;
+    width: 100%;
+    background: @black;
+  }
+
+  .mobileMenuButton{
+    float: right;;
+    display: inline-block;
+    margin: 12px 10px;
+    border: 1px solid @textBaseColor;
+    padding: 9px 7px;
+    color: @textBaseColor;
+    cursor: default;
+    font-size: 13px;
+  }
+
+  .search{
+    float: right;
+  }
+
+  .search .button{
+    display: none;
+  }
+
+  .item{
+    width: 100%;
+  }
+
+  // slider
+  .slider{
+    height: auto;
+
+    .sliderImage-mobile{
+      display: block;
+      width: 100%;
+    }
+
+    .productDetails{
+      position: relative;
+      top: auto;
+      left: 0;
+      padding: 30px 0px;
+      max-width: 100%;
+      width: 100%;
+      background-color: black;
+      text-align: center;
+    }
+
+    .logoImage{
+      display: none;
+    }
+
+    .productName{
+      font-size: 26px;
+    }
+
+    .details{
+      margin-bottom: 0px;
+    }
+
+    .size{
+      display: none;
+    }
+  }
+
+  .sliderImage{
+    display: none;
+  }
+
+  .paginationBullets{
+    display: none;
+  }
+
+  .mobileHide{
+    display: none;
+  }
+}
+
+.hide{
+  display: none;
+}
+
+@media (max-width:1490px){
+    .articles .item{
+        width: 33%;
+    }
+}
+
+@media (max-width:1158px){
+    .articles .item{
+        width: 49%;
+    }
+}
+
+@media (max-width:760px){
+    .articles .item{
+        width: 99%;
+    }
+}
